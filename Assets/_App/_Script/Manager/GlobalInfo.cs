@@ -4,7 +4,12 @@ using Zenject;
 public class GlobalInfo : MonoBehaviour, ILogger
 {
     public static GlobalInfo I { get; set; }
-    private void Awake() => I = this;
+    private void Awake()
+    {
+        I = this;
+
+        logger = new Logger();
+    }
 
     #region Area logger
     [Inject] ILogger logger;
