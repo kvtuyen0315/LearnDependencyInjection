@@ -6,8 +6,8 @@ public class DI_SceneInstaller : MonoInstaller
     {
         base.InstallBindings();
 
-        Container.Bind<ILogger>().To<Logger>();
-        Container.Bind<IAudioManager>().To<AudioManager>();
-        Container.Bind<ISocialManager>().To<SocialManager>();
+        Container.Bind<ILogger>().To<Logger>().AsSingle();
+        Container.Bind<IAudioManager>().To<AudioManager>().AsSingle();
+        Container.Bind<ISocialManager>().To<SocialManager>().AsSingle();
     }
 }
