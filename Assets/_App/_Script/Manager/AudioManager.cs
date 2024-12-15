@@ -9,7 +9,7 @@ public interface IAudioManager
 
 public class AudioManager : MonoBehaviour, IAudioManager
 {
-    private void ShowLog(string content) => GlobalInfo.I.ShowLog(content);
+    private void ShowLog(string content) => GlobalData.I.ShowLog(content);
 
     public void Pause() => ShowLog($"Pause");
 

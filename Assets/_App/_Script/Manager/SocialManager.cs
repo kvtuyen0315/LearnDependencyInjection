@@ -8,7 +8,7 @@ public interface ISocialManager
 
 public class SocialManager : MonoBehaviour, ISocialManager
 {
-    private void ShowLog(string content) => GlobalInfo.I.ShowLog(content);
+    private void ShowLog(string content) => GlobalData.I.ShowLog(content);
 
     public void PushOffWall() => ShowLog($"PushOffWall");
 
